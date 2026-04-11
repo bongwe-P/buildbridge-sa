@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireframe — BuildBridge SA Landing Page</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Courier New', monospace; background: #fff; color: #222; }
+  .page-label { background: #222; color: #fff; padding: 8px 16px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; }
+  .screen { max-width: 1024px; margin: 0 auto; border: 2px solid #222; }
+  .box { background: #e8e8e8; border: 1.5px solid #999; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 11px; color: #666; letter-spacing: 0.5px; }
+  .box.dark { background: #444; color: #ccc; border-color: #222; }
+  .annotation { font-size: 10px; color: #c0392b; font-style: italic; padding: 2px 8px; }
+  .row { display: flex; }
+  .col { flex: 1; }
+  .label { font-size: 10px; color: #888; text-align: center; padding: 4px; border-top: 1px dashed #ccc; }
+  .section-title { font-size: 10px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; padding: 6px 10px; background: #f5f5f5; border-bottom: 1px solid #ddd; color: #555; }
+  .gap { height: 8px; background: #fff; }
+  .note { font-size: 10px; color: #c0392b; padding: 4px 10px; border-left: 3px solid #c0392b; margin: 6px 10px; }
+</style>
+</head>
+<body>
+<div class="page-label">Wireframe — BuildBridge SA — Landing Page (/)</div>
+<div class="screen">
+
+  <!-- Navbar -->
+  <div class="section-title">NAVBAR (Fixed, floating, backdrop-blur)</div>
+  <div class="row" style="height:52px; border-bottom:2px solid #222; padding:0 16px; align-items:center; gap:12px;">
+    <div class="box" style="width:160px; height:32px; font-weight:bold;">LOGO: BuildBridge SA</div>
+    <div style="flex:1; display:flex; gap:20px; justify-content:center;">
+      <div class="box" style="width:60px; height:28px;">Home</div>
+      <div class="box" style="width:60px; height:28px;">Shop</div>
+      <div class="box" style="width:120px; height:28px;">Smart Estimator</div>
+      <div class="box" style="width:60px; height:28px;">About</div>
+      <div class="box" style="width:70px; height:28px;">Contact</div>
+    </div>
+    <div style="display:flex; gap:8px;">
+      <div class="box" style="width:36px; height:32px;">&#9790;</div>
+      <div class="box" style="width:36px; height:32px;">&#9825; 2</div>
+      <div class="box" style="width:80px; height:32px; background:#f97316; color:#fff; border-color:#f97316;">&#128722; Cart 1</div>
+    </div>
+  </div>
+  <div class="note">Scroll progress bar: 1px orange line at very top. Navbar shrinks on scroll.</div>
+
+  <!-- Hero Split -->
+  <div class="section-title">HERO SECTION — Split Layout (min-height: 100vh)</div>
+  <div class="row" style="height:320px; border-bottom:2px solid #222;">
+    <div class="box dark col" style="flex:0.5; border-right:1px solid #555; flex-direction:column; gap:10px;">
+      <div style="font-size:10px; color:#aaa; letter-spacing:1px;">Blueprint SVG grid (animated drift upward)</div>
+      <div style="font-size:13px; color:#fff; font-weight:bold;">I'm a Builder</div>
+      <div style="font-size:10px; color:#aaa;">Staggered word reveal (clip-path)</div>
+      <div class="box" style="background:#f97316; color:#fff; border-color:#f97316; width:140px; height:36px; font-size:11px;">Browse Surplus Materials</div>
+    </div>
+    <div class="box dark col" style="flex:0.5; flex-direction:column; gap:10px; background:#1e293b;">
+      <div style="font-size:10px; color:#aaa; letter-spacing:1px;">Hover to expand panel (60/40 split)</div>
+      <div style="font-size:13px; color:#fff; font-weight:bold;">I'm a Contractor</div>
+      <div class="box" style="background:transparent; border-color:#f97316; color:#f97316; width:140px; height:36px; font-size:11px;">List Your Surplus</div>
+    </div>
+  </div>
+  <div class="annotation" style="padding:4px 10px;">&larr; Hover expands active side to 60%, other collapses to 40% | Grain overlay at 4% opacity</div>
+
+  <div class="gap"></div>
+
+  <!-- Stats Row -->
+  <div class="section-title">IMPACT STATS ROW (Count-up animation on scroll)</div>
+  <div class="row" style="height:80px; border-bottom:1.5px solid #ddd;">
+    <div class="box col" style="border-right:1px solid #ddd; flex-direction:column; gap:4px;">
+      <div style="font-size:20px; font-weight:bold; color:#f97316;">2,400+</div>
+      <div style="font-size:10px;">Tonnes Diverted from Landfill</div>
+    </div>
+    <div class="box col" style="border-right:1px solid #ddd; flex-direction:column; gap:4px;">
+      <div style="font-size:20px; font-weight:bold; color:#f97316;">R1.2M</div>
+      <div style="font-size:10px;">Saved by Community Builders</div>
+    </div>
+    <div class="box col" style="flex-direction:column; gap:4px;">
+      <div style="font-size:20px; font-weight:bold; color:#f97316;">340+</div>
+      <div style="font-size:10px;">Community Builders Helped</div>
+    </div>
+  </div>
+
+  <div class="gap"></div>
+
+  <!-- Categories -->
+  <div class="section-title">HORIZONTAL SCROLL CATEGORIES</div>
+  <div class="row" style="height:100px; padding:10px; gap:8px; border-bottom:1.5px solid #ddd; overflow:hidden;">
+    <div class="box" style="min-width:120px; height:80px; flex-direction:column; gap:6px; border-radius:12px;"><div style="width:32px;height:32px;background:#ddd;border-radius:50%;"></div><div style="font-size:10px;">Bricks</div><div style="font-size:9px;color:#f97316;">18 listings</div></div>
+    <div class="box" style="min-width:120px; height:80px; flex-direction:column; gap:6px; border-radius:12px;"><div style="width:32px;height:32px;background:#ddd;border-radius:50%;"></div><div style="font-size:10px;">Cement</div><div style="font-size:9px;color:#f97316;">7 listings</div></div>
+    <div class="box" style="min-width:120px; height:80px; flex-direction:column; gap:6px; border-radius:12px;"><div style="width:32px;height:32px;background:#ddd;border-radius:50%;"></div><div style="font-size:10px;">Timber</div><div style="font-size:9px;color:#f97316;">5 listings</div></div>
+    <div class="box" style="min-width:120px; height:80px; flex-direction:column; gap:6px; border-radius:12px;"><div style="width:32px;height:32px;background:#ddd;border-radius:50%;"></div><div style="font-size:10px;">Roofing</div><div style="font-size:9px;color:#f97316;">4 listings</div></div>
+    <div class="box" style="min-width:120px; height:80px; flex-direction:column; gap:6px; border-radius:12px;"><div style="width:32px;height:32px;background:#ddd;border-radius:50%;"></div><div style="font-size:10px;">Scaffolding</div><div style="font-size:9px;color:#f97316;">3 listings</div></div>
+  </div>
+
+  <div class="gap"></div>
+
+  <!-- Featured Listings -->
+  <div class="section-title">FEATURED LISTINGS GRID (3 columns, staggered fade-in on scroll)</div>
+  <div class="row" style="gap:10px; padding:10px; border-bottom:1.5px solid #ddd; flex-wrap:wrap;">
+    <div style="flex:1; min-width:200px; border:1.5px solid #999; border-radius:12px; overflow:hidden;">
+      <div class="box" style="height:100px; border-radius:0; border:none; flex-direction:column; gap:4px;">
+        <div>[PRODUCT IMAGE]</div>
+        <div class="box" style="width:90px; height:18px; background:#ef4444; color:#fff; border:none; font-size:9px;">Urgent Clearance</div>
+      </div>
+      <div style="padding:8px;">
+        <div class="box" style="height:12px; width:60%; margin-bottom:6px; border:none; background:#e8e8e8;"></div>
+        <div class="box" style="height:14px; width:85%; margin-bottom:6px; border:none; background:#e8e8e8;"></div>
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <div style="font-size:14px; font-weight:bold; color:#f97316;">R2.50/brick</div>
+          <div class="box" style="width:70px; height:28px; background:#f97316; color:#fff; border-color:#f97316; font-size:10px;">Add to Cart</div>
+        </div>
+      </div>
+    </div>
+    <div style="flex:1; min-width:200px; border:1.5px solid #999; border-radius:12px; overflow:hidden;">
+      <div class="box" style="height:100px; border-radius:0; border:none;">[PRODUCT IMAGE]</div>
+      <div style="padding:8px;">
+        <div class="box" style="height:12px; width:50%; margin-bottom:6px; border:none; background:#e8e8e8;"></div>
+        <div class="box" style="height:14px; width:90%; margin-bottom:6px; border:none; background:#e8e8e8;"></div>
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <div style="font-size:14px; font-weight:bold; color:#f97316;">R89.00/bag</div>
+          <div class="box" style="width:70px; height:28px; background:#f97316; color:#fff; border-color:#f97316; font-size:10px;">Add to Cart</div>
+        </div>
+      </div>
+    </div>
+    <div style="flex:1; min-width:200px; border:1.5px solid #999; border-radius:12px; overflow:hidden;">
+      <div class="box" style="height:100px; border-radius:0; border:none;">[PRODUCT IMAGE]</div>
+      <div style="padding:8px;">
+        <div class="box" style="height:12px; width:55%; margin-bottom:6px; border:none; background:#e8e8e8;"></div>
+        <div class="box" style="height:14px; width:80%; margin-bottom:6px; border:none; background:#e8e8e8;"></div>
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <div style="font-size:14px; font-weight:bold; color:#f97316;">R45.00/m</div>
+          <div class="box" style="width:70px; height:28px; background:#f97316; color:#fff; border-color:#f97316; font-size:10px;">Add to Cart</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="annotation">&larr; 3D tilt on hover | Heart icon = wishlist toggle | -X% off retail badge top-right of image</div>
+
+  <div class="gap"></div>
+
+  <!-- How It Works -->
+  <div class="section-title">HOW IT WORKS — 3-Step Timeline</div>
+  <div class="row" style="height:100px; border-bottom:1.5px solid #ddd; padding:10px; align-items:center; position:relative;">
+    <div class="box col" style="flex-direction:column; gap:6px; height:80px;">
+      <div class="box" style="width:40px;height:40px;border-radius:50%;background:#f97316;color:#fff;border-color:#f97316;font-weight:bold;">1</div>
+      <div style="font-size:10px; text-align:center;">Browse &amp; Estimate</div>
+    </div>
+    <div style="flex:0.2; height:2px; background:#ddd;"></div>
+    <div class="box col" style="flex-direction:column; gap:6px; height:80px;">
+      <div class="box" style="width:40px;height:40px;border-radius:50%;background:#f97316;color:#fff;border-color:#f97316;font-weight:bold;">2</div>
+      <div style="font-size:10px; text-align:center;">Add Bundle to Cart</div>
+    </div>
+    <div style="flex:0.2; height:2px; background:#ddd;"></div>
+    <div class="box col" style="flex-direction:column; gap:6px; height:80px;">
+      <div class="box" style="width:40px;height:40px;border-radius:50%;background:#f97316;color:#fff;border-color:#f97316;font-weight:bold;">3</div>
+      <div style="font-size:10px; text-align:center;">Checkout &amp; Deliver</div>
+    </div>
+  </div>
+  <div class="annotation">&larr; Connector line draws left-to-right via scaleX animation on scroll</div>
+
+  <!-- Footer -->
+  <div class="gap"></div>
+  <div class="section-title">FOOTER</div>
+  <div class="box dark" style="height:100px; flex-direction:column; gap:6px;">
+    <div style="font-size:12px; color:#fff; font-weight:bold;">BuildBridge SA | Navigate | Impact</div>
+    <div style="font-size:9px; color:#666;">&#169; 2026 BuildBridge SA. Built for INF3014F.</div>
+  </div>
+
+  <!-- Live Activity Feed -->
+  <div class="note">Live Activity Feed: Fixed bottom-right. Cycles SA activity messages every 4s. e.g. "Sipho in Khayelitsha just saved R1,240 on facebrick"</div>
+
+</div>
+</body>
+</html>
