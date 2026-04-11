@@ -30,6 +30,8 @@ export default function Navbar() {
     { to: '/', label: 'Home' },
     { to: '/shop', label: 'Shop' },
     { to: '/estimator', label: 'Smart Estimator' },
+    { to: '/about', label: 'About' },
+    { to: '/contact', label: 'Contact' },
   ]
 
   return (

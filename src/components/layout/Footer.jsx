@@ -15,7 +15,7 @@ export default function Footer() {
         <div>
           <h4 className="font-heading font-bold text-sm uppercase tracking-widest text-slate-500 mb-4">Navigate</h4>
           <div className="flex flex-col gap-2">
-            {[['/', 'Home'], ['/shop', 'Shop'], ['/estimator', 'Smart Estimator']].map(([to, label]) => (
+            {[['/', 'Home'], ['/shop', 'Shop'], ['/estimator', 'Smart Estimator'], ['/about', 'About'], ['/contact', 'Contact Us']].map(([to, label]) => (
               <Link key={to} to={to} className="text-slate-400 hover:text-orange-500 transition-colors duration-200 text-sm font-body cursor-pointer">
                 {label}
               </Link>

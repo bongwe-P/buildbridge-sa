@@ -10,6 +10,8 @@ import LandingPage from './pages/LandingPage'
 import ShopPage from './pages/ShopPage'
 import EstimatorPage from './pages/EstimatorPage'
 import CheckoutPage from './pages/CheckoutPage'
+import AboutPage from './pages/AboutPage'
+import ContactPage from './pages/ContactPage'
 
 export default function App() {
   return (
@@ -23,6 +25,8 @@ export default function App() {
         <Route path="/shop" element={<ShopPage />} />
         <Route path="/estimator" element={<EstimatorPage />} />
         <Route path="/checkout" element={<CheckoutPage />} />
+        <Route path="/about"   element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
       <Footer />
       <LiveActivityFeed />
