@@ -352,3 +352,129 @@ Cart and Wishlist are drawers (no route), triggered via UIContext.
 - User authentication / login
 - Backend / database (mock data only)
 - Supplier upload flow (supplier CTA links to a "Coming Soon" toast)
+
+---
+
+## 11. About Page (`/about`) — "Blueprint Editorial"
+
+**Aesthetic direction:** Editorial / industrial. Feels like a premium South African brand story — dark hero, drawn timeline, impactful pull-quote.
+
+**Unforgettable element:** Vertical timeline where the connecting SVG line *draws itself* on scroll via `stroke-dashoffset` animation — like a blueprint being drafted in real time.
+
+### Sections
+
+**11.1 Hero Band**
+- `bg-slate-900` full-width, `py-32`
+- Rubik 900 heading: "Building a Better South Africa" — staggered word reveal via `clip-path: inset(0 100% 0 0)` → `inset(0 0% 0 0)`, 80ms stagger per word (same pattern as HeroSplit)
+- Orange underline accent below heading (2px, animated width 0→100% on mount)
+- Subheading in `text-slate-400`: "Turning construction surplus into community opportunity."
+- Grain SVG overlay at `opacity-[0.04]`
+
+**11.2 Mission Pull-Quote**
+- Light background (`bg-slate-50 dark:bg-slate-900`)
+- Oversized italic Rubik quote: *"Every tonne of surplus concrete diverted is a foundation laid for someone's future."*
+- 4px left orange border (`border-l-4 border-orange-500`)
+- Clip-path slide-in from left on IntersectionObserver entry
+
+**11.3 Animated Blueprint Timeline**
+- 4 milestones, alternating left/right layout (desktop), single column (mobile):
+  - **2022** — "BuildBridge SA Founded in Cape Town"
+  - **2023** — "100+ Active Surplus Suppliers Onboarded"
+  - **2024** — "1,200 Community Builders Served"
+  - **2026** — "R1.2M Saved Across the Western Cape"
+- Vertical SVG line between milestones: `stroke-dasharray` equals total path length, `stroke-dashoffset` animates from full length → 0 as section scrolls into view (IntersectionObserver triggers requestAnimationFrame loop)
+- Each milestone card: `rounded-2xl`, `border border-slate-200 dark:border-slate-700`, orange year badge, fade-in with staggered `animation-delay`
+
+**11.4 Impact Stats Band**
+- `bg-slate-900` dark band, `py-20`
+- 3 count-up stats using `useCountUp` hook:
+  - `2400+` Tonnes Diverted from Landfill
+  - `R1.2M` Saved by Builders
+  - `340+` Community Builders Helped
+- Same pattern as `StatsRow` component on landing page
+
+**11.5 Values Grid**
+- 3 cards on light background:
+  1. **Circular Economy** — SVG recycle/loop icon
+  2. **Community First** — SVG people/community icon
+  3. **Radical Transparency** — SVG document/open icon
+- Cards: `rounded-2xl`, `border-2 border-transparent hover:border-orange-500`, 3D tilt on mousemove (same as ProductCard)
+- Each card: icon (orange, `w-12 h-12`), bold title, body text description, fade-in on scroll with staggered delay
+
+---
+
+## 12. Contact Page (`/contact`) — "Industrial Precision"
+
+**Aesthetic direction:** Clean, purposeful, industrial. Not a boring form dump — structured like a construction blueprint with precision.
+
+**Unforgettable element:** Floating label inputs where the label *builds upward* on focus — `transform: translateY(-24px) scale(0.85)` transition, mimicking a scaffold rising.
+
+### Sections
+
+**12.1 Compact Hero**
+- Reuse blueprint SVG grid background (from HeroSplit's `driftUp` animation)
+- `py-24` with `bg-slate-900` dark background
+- Heading: "Let's Build Together" — Rubik 900, white, clip-path reveal on mount
+- Subtext: "Whether you're a supplier, builder, or just curious — we want to hear from you."
+
+**12.2 Split Contact Layout**
+Full-width section, `grid grid-cols-1 lg:grid-cols-2 gap-0`:
+
+**Left Panel** (`bg-slate-900 dark:bg-slate-950`, `p-12`):
+- Section label: "REACH US" (uppercase, `text-orange-500`, `tracking-widest`, small)
+- 3 contact info cards, each `flex items-center gap-4 p-4 rounded-2xl bg-white/5 hover:bg-white/10 transition`:
+  - Email: `hello@buildbridgesa.co.za` — Mail icon
+  - WhatsApp: `+27 21 000 0000` — Phone icon
+  - Location: `Cape Town, Western Cape, South Africa` — MapPin icon
+- Office hours strip: Mon–Fri 08:00–17:00 SAST, `text-slate-400 text-sm`
+- Subtle orange gradient background blob (`absolute`, `blur-3xl`, `opacity-10`) behind the panel
+
+**Right Panel** (`bg-white dark:bg-slate-800`, `p-12`):
+- Section label: "SEND A MESSAGE"
+- Contact form with **floating label inputs**:
+  - Full Name (text)
+  - Email Address (email)
+  - Subject (select): General Enquiry / Supplier Onboarding / Bulk Order / Technical Support
+  - Message (textarea, 5 rows)
+- Each input: `border-b-2 border-slate-300 focus:border-orange-500` (underline style, no full border box)
+- Floating label: `absolute top-4 left-0`, transitions on input focus/fill: `translateY(-24px) scale(0.85) text-orange-500`
+- Submit button: full-width `bg-orange-500 text-white rounded-2xl py-4`, hover shows orange pulse ring (`ring-4 ring-orange-500/30`), magnetic effect via `useMagneticButton`
+- On submit: button replaced inline with green `✓ Message Sent! We'll respond within 24 hours.` (no page reload, `useState`)
+
+---
+
+## 13. Updated Routing
+
+```jsx
+<Routes>
+  <Route path="/"          element={<LandingPage />} />
+  <Route path="/shop"      element={<ShopPage />} />
+  <Route path="/estimator" element={<EstimatorPage />} />
+  <Route path="/checkout"  element={<CheckoutPage />} />
+  <Route path="/about"     element={<AboutPage />} />
+  <Route path="/contact"   element={<ContactPage />} />
+</Routes>
+```
+
+Navbar `navLinks` array updated to include About and Contact. Footer navigate links updated to include both.
+
+---
+
+## 14. Updated File Structure (additions only)
+
+```
+src/
+  pages/
+    AboutPage.jsx       ← new
+    ContactPage.jsx     ← new
+  components/
+    about/
+      AboutHero.jsx     ← new
+      MissionQuote.jsx  ← new
+      BlueprintTimeline.jsx ← new (SVG stroke-dashoffset draw)
+      ValuesGrid.jsx    ← new
+    contact/
+      ContactHero.jsx   ← new
+      ContactInfo.jsx   ← new
+      ContactForm.jsx   ← new (floating label inputs)
+```
