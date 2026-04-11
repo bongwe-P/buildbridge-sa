@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Wireframe — BuildBridge SA Contact Page</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Courier New', monospace; background: #fff; color: #222; }
+  .page-label { background: #222; color: #fff; padding: 8px 16px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; }
+  .screen { max-width: 1024px; margin: 0 auto; border: 2px solid #222; }
+  .box { background: #e8e8e8; border: 1.5px solid #999; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 11px; color: #666; letter-spacing: 0.5px; }
+  .box.dark { background: #444; color: #ccc; border-color: #222; }
+  .annotation { font-size: 10px; color: #c0392b; font-style: italic; padding: 4px 10px; }
+  .row { display: flex; }
+  .col { flex: 1; }
+  .section-title { font-size: 10px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; padding: 6px 10px; background: #f5f5f5; border-bottom: 1px solid #ddd; color: #555; }
+  .gap { height: 8px; background: #fff; }
+  .note { font-size: 10px; color: #c0392b; padding: 4px 10px; border-left: 3px solid #c0392b; margin: 6px 10px; }
+  .float-label { position:relative; padding-top:18px; margin-bottom:16px; }
+  .float-label label { position:absolute; top:0; left:0; font-size:9px; color:#f97316; letter-spacing:0.5px; text-transform:uppercase; }
+  .float-label .field { width:100%; height:32px; background:#fff; border:none; border-bottom:2px solid #f97316; font-size:11px; color:#555; display:flex; align-items:center; padding-left:4px; }
+</style>
+</head>
+<body>
+<div class="page-label">Wireframe — BuildBridge SA — Contact Page (/contact)</div>
+<div class="screen">
+
+  <!-- Navbar -->
+  <div class="box" style="height:52px; border-bottom:2px solid #222; font-weight:bold; background:#f5f5f5; justify-content:space-between; padding:0 16px;">
+    <span>LOGO: BuildBridge SA</span>
+    <span style="font-size:10px; color:#888;">Home | Shop | Smart Estimator | About | Contact (active)</span>
+    <span style="font-size:10px;">🌙 ♡ 🛒</span>
+  </div>
+
+  <!-- Section 1: Hero -->
+  <div class="section-title">SECTION 1 — CONTACT HERO (bg-slate-900, blueprint grid, py-32)</div>
+  <div class="box dark" style="height:160px; flex-direction:column; gap:10px; position:relative; overflow:hidden;">
+    <div style="position:absolute; inset:0; opacity:0.06; background: repeating-linear-gradient(0deg, transparent, transparent 39px, #f97316 39px, #f97316 40px), repeating-linear-gradient(90deg, transparent, transparent 39px, #f97316 39px, #f97316 40px); animation: driftUp 20s linear infinite;"></div>
+    <div style="z-index:1; font-size:9px; color:#f97316; letter-spacing:3px; text-transform:uppercase;">GET IN TOUCH</div>
+    <div style="z-index:1; font-size:20px; font-weight:bold; color:#fff;">Let's Build Together</div>
+    <div style="z-index:1; font-size:10px; color:#94a3b8; max-width:400px; text-align:center;">Whether you're a supplier, builder, or just curious — we want to hear from you.</div>
+  </div>
+  <div class="annotation">← Heading reveals via clip-path animation | Blueprint grid drifts upward (driftUp keyframe, 20s loop) | Grain SVG overlay</div>
+
+  <div class="gap"></div>
+
+  <!-- Section 2: Split Layout -->
+  <div class="section-title">SECTION 2 — SPLIT LAYOUT (grid-cols-1 lg:grid-cols-2, min-h-[600px])</div>
+  <div class="row" style="border-bottom:1.5px solid #ddd; min-height:420px;">
+
+    <!-- Left: Contact Info Panel -->
+    <div style="flex:1; background:#1e293b; padding:24px; border-right:1.5px solid #222; position:relative; overflow:hidden;">
+      <div style="position:absolute; top:-40px; left:-40px; width:160px; height:160px; background:#f97316; border-radius:50%; filter:blur(60px); opacity:0.1; pointer-events:none;"></div>
+      <div style="font-size:9px; color:#f97316; letter-spacing:3px; text-transform:uppercase; margin-bottom:20px;">REACH US</div>
+
+      <!-- Contact cards -->
+      <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:16px;">
+        <div style="display:flex; gap:10px; align-items:center; padding:10px; background:rgba(255,255,255,0.05); border-radius:12px;">
+          <div class="box" style="width:36px; height:36px; border-radius:10px; background:rgba(249,115,22,0.1); border-color:rgba(249,115,22,0.3); flex-shrink:0; font-size:14px;">✉</div>
+          <div style="text-align:left;">
+            <div style="font-size:9px; color:#64748b; text-transform:uppercase; letter-spacing:0.5px;">Email</div>
+            <div style="font-size:10px; color:#fff;">hello@buildbridgesa.co.za</div>
+          </div>
+        </div>
+        <div style="display:flex; gap:10px; align-items:center; padding:10px; background:rgba(255,255,255,0.05); border-radius:12px;">
+          <div class="box" style="width:36px; height:36px; border-radius:10px; background:rgba(249,115,22,0.1); border-color:rgba(249,115,22,0.3); flex-shrink:0; font-size:14px;">📞</div>
+          <div style="text-align:left;">
+            <div style="font-size:9px; color:#64748b; text-transform:uppercase; letter-spacing:0.5px;">WhatsApp</div>
+            <div style="font-size:10px; color:#fff;">+27 21 000 0000</div>
+          </div>
+        </div>
+        <div style="display:flex; gap:10px; align-items:center; padding:10px; background:rgba(255,255,255,0.05); border-radius:12px;">
+          <div class="box" style="width:36px; height:36px; border-radius:10px; background:rgba(249,115,22,0.1); border-color:rgba(249,115,22,0.3); flex-shrink:0; font-size:14px;">📍</div>
+          <div style="text-align:left;">
+            <div style="font-size:9px; color:#64748b; text-transform:uppercase; letter-spacing:0.5px;">Location</div>
+            <div style="font-size:10px; color:#fff;">Cape Town, Western Cape, SA</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Office hours -->
+      <div style="display:flex; gap:10px; align-items:center; padding:10px; background:rgba(255,255,255,0.05); border-radius:12px;">
+        <div class="box" style="width:36px; height:36px; border-radius:10px; background:rgba(249,115,22,0.1); border-color:rgba(249,115,22,0.3); flex-shrink:0; font-size:14px;">🕐</div>
+        <div style="text-align:left;">
+          <div style="font-size:9px; color:#64748b; text-transform:uppercase; letter-spacing:0.5px;">Office Hours</div>
+          <div style="font-size:10px; color:#fff;">Mon–Fri: 08:00–17:00 SAST</div>
+          <div style="font-size:9px; color:#64748b;">We respond within 24 hours</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Contact Form -->
+    <div style="flex:1; background:#fff; padding:24px;">
+      <div style="font-size:9px; color:#f97316; letter-spacing:3px; text-transform:uppercase; margin-bottom:20px;">SEND A MESSAGE</div>
+
+      <!-- Floating label inputs -->
+      <div class="float-label">
+        <label>Full Name</label>
+        <div class="field">John Ndlovu</div>
+      </div>
+      <div class="float-label">
+        <label>Email Address</label>
+        <div class="field">john@example.com</div>
+      </div>
+      <div class="float-label">
+        <label>Subject</label>
+        <div class="field" style="color:#888;">General Enquiry ▾</div>
+      </div>
+      <div class="float-label" style="padding-top:18px;">
+        <label>Your Message</label>
+        <div class="field" style="height:80px; align-items:flex-start; padding-top:8px; color:#bbb;">Type your message here...</div>
+      </div>
+
+      <div class="note" style="margin: 0 0 12px;">Floating labels: rise to top + shrink (translateY + scale) on input focus/fill — like a scaffold building upward</div>
+
+      <!-- Submit button -->
+      <div class="box" style="height:44px; background:#f97316; color:#fff; border-color:#f97316; border-radius:12px; font-size:12px; font-weight:bold; gap:8px;">
+        ✈ Send Message
+      </div>
+      <div class="annotation">← Magnetic button effect on hover (useMagneticButton hook) | On submit: button replaced with green ✓ success state (no page reload)</div>
+
+      <!-- Success state annotation -->
+      <div style="margin-top:12px; border:1.5px dashed #22c55e; border-radius:12px; padding:12px; display:flex; align-items:center; gap:8px; background:#f0fdf4;">
+        <div style="font-size:20px;">✓</div>
+        <div style="text-align:left;">
+          <div style="font-size:11px; font-weight:bold; color:#166534;">Message Sent!</div>
+          <div style="font-size:10px; color:#4ade80;">We'll respond within 24 hours.</div>
+        </div>
+      </div>
+      <div class="annotation">← Success state shown after submit (replaces form, no navigation)</div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="gap"></div>
+  <div class="box dark" style="height:60px; font-size:11px;">FOOTER — Logo | Navigate (Home, Shop, Estimator, About, Contact) | Impact stat</div>
+
+</div>
+</body>
+</html>
