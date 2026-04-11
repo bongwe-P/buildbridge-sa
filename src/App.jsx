@@ -1,5 +1,12 @@
 // src/App.jsx
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
+
+function ScrollToTop() {
+  const { pathname } = useLocation()
+  useEffect(() => { window.scrollTo(0, 0) }, [pathname])
+  return null
+}
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import CustomCursor from './components/layout/CustomCursor'
@@ -16,6 +23,7 @@ import ContactPage from './pages/ContactPage'
 export default function App() {
   return (
     <div className="font-body bg-white dark:bg-slate-950 min-h-screen">
+      <ScrollToTop />
       <CustomCursor />
       <Navbar />
       <CartDrawer />
