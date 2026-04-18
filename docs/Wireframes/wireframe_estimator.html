@@ -10,20 +10,19 @@
   .screen { max-width: 1024px; margin: 0 auto; border: 2px solid #222; }
   .box { background: #e8e8e8; border: 1.5px solid #999; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 11px; color: #666; letter-spacing: 0.5px; }
   .box.dark { background: #444; color: #ccc; border-color: #222; }
-  .annotation { font-size: 10px; color: #c0392b; font-style: italic; padding: 4px 10px; }
   .row { display: flex; }
   .col { flex: 1; }
   .section-title { font-size: 10px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; padding: 6px 10px; background: #f5f5f5; border-bottom: 1px solid #ddd; color: #555; }
   .gap { height: 8px; background: #fff; }
-  .note { font-size: 10px; color: #c0392b; padding: 4px 10px; border-left: 3px solid #c0392b; margin: 6px 10px; }
-  .formula { font-size: 10px; background: #f0f4ff; border: 1px solid #c7d2fe; padding: 6px 10px; margin: 6px 10px; border-radius: 4px; color: #3730a3; font-family: monospace; }
+  .ph { background: #e8e8e8; border-radius: 4px; }
 </style>
 </head>
 <body>
-<div class="page-label">Wireframe — BuildBridge SA — Smart Project Estimator (/estimator) — 10-Mark Custom Feature</div>
+<div class="page-label">Wireframe — BuildBridge SA — Smart Project Estimator (/estimator)</div>
 <div class="screen">
 
   <!-- Navbar -->
+  <div class="section-title">NAVBAR</div>
   <div class="box" style="height:52px; border-bottom:2px solid #222; font-weight:bold; background:#f5f5f5; justify-content:space-between; padding:0 16px;">
     <span>LOGO: BuildBridge SA</span>
     <span style="font-size:10px; color:#888;">Home | Shop | Smart Estimator (active) | About | Contact</span>
@@ -31,100 +30,90 @@
   </div>
 
   <!-- Page Header -->
-  <div style="padding:24px 20px 12px; border-bottom:1.5px solid #ddd;">
+  <div style="padding:20px; border-bottom:1.5px solid #ddd;">
     <div style="font-size:18px; font-weight:bold; margin-bottom:4px;">Smart Project Estimator</div>
-    <div style="font-size:11px; color:#888;">Your free digital quantity surveyor — calculate exactly what you need before you buy.</div>
+    <div style="font-size:11px; color:#888;">Calculate exactly what you need before you buy.</div>
   </div>
 
   <!-- Two-column layout -->
-  <div class="row" style="min-height:520px; border-bottom:1.5px solid #ddd;">
+  <div class="row" style="min-height:460px; border-bottom:1.5px solid #ddd;">
 
     <!-- LEFT: Input Form -->
-    <div style="flex:1; border-right:1.5px solid #ddd; padding:16px; display:flex; flex-direction:column; gap:16px;">
-      <div class="section-title" style="margin:-16px -16px 0; padding:6px 10px;">LEFT PANEL — INPUT FORM</div>
-      <div style="height:16px;"></div>
+    <div style="flex:1; border-right:1.5px solid #ddd; padding:16px; display:flex; flex-direction:column; gap:20px;">
+      <div class="section-title" style="margin:-16px -16px 0; padding:6px 10px;">INPUT FORM</div>
+      <div style="height:8px;"></div>
 
       <!-- Wall Length Slider -->
       <div style="display:flex; flex-direction:column; gap:6px;">
-        <div style="font-size:11px; font-weight:bold; color:#555;">Wall Length: <span style="color:#f97316;">8m</span></div>
+        <div style="font-size:11px; font-weight:bold; color:#555;">Wall Length</div>
         <div class="box" style="height:10px; border-radius:10px; position:relative; border:none; background:#e2e8f0;">
           <div style="position:absolute; left:0; width:40%; height:100%; background:#f97316; border-radius:10px;"></div>
-          <div style="position:absolute; left:calc(40% - 8px); width:16px; height:16px; background:#f97316; border-radius:50%; border:2px solid #fff; box-shadow:0 0 0 2px #f97316; top:50%; transform:translateY(-50%);"></div>
+          <div style="position:absolute; left:calc(40% - 8px); width:16px; height:16px; background:#f97316; border-radius:50%; border:2px solid #fff; top:50%; transform:translateY(-50%);"></div>
         </div>
         <div style="display:flex; justify-content:space-between; font-size:9px; color:#aaa;"><span>1m</span><span>20m</span></div>
       </div>
 
       <!-- Wall Height Slider -->
       <div style="display:flex; flex-direction:column; gap:6px;">
-        <div style="font-size:11px; font-weight:bold; color:#555;">Wall Height: <span style="color:#f97316;">2.5m</span></div>
+        <div style="font-size:11px; font-weight:bold; color:#555;">Wall Height</div>
         <div class="box" style="height:10px; border-radius:10px; position:relative; border:none; background:#e2e8f0;">
           <div style="position:absolute; left:0; width:50%; height:100%; background:#f97316; border-radius:10px;"></div>
-          <div style="position:absolute; left:calc(50% - 8px); width:16px; height:16px; background:#f97316; border-radius:50%; border:2px solid #fff; box-shadow:0 0 0 2px #f97316; top:50%; transform:translateY(-50%);"></div>
+          <div style="position:absolute; left:calc(50% - 8px); width:16px; height:16px; background:#f97316; border-radius:50%; border:2px solid #fff; top:50%; transform:translateY(-50%);"></div>
         </div>
         <div style="display:flex; justify-content:space-between; font-size:9px; color:#aaa;"><span>0.5m</span><span>5m</span></div>
       </div>
 
-      <!-- Live SVG Wall Diagram -->
-      <div class="section-title" style="margin:0 -16px; padding:6px 10px;">LIVE SVG WALL DIAGRAM (updates on every slider change)</div>
-      <div class="box" style="height:180px; flex-direction:column; gap:8px; border-radius:8px; background:#fff8f0; border-color:#f97316; border-style:dashed;">
-        <div style="font-size:10px; color:#888;">SVG renders proportional brick grid</div>
-        <div style="display:grid; grid-template-columns:repeat(8,1fr); gap:2px; width:200px;">
-          <div style="background:#fb923c; height:14px; border-radius:1px; opacity:0.7;"></div>
-          <div style="background:#fb923c; height:14px; border-radius:1px; opacity:0.7;"></div>
-          <div style="background:#fb923c; height:14px; border-radius:1px; opacity:0.7;"></div>
-          <div style="background:#fb923c; height:14px; border-radius:1px; opacity:0.7;"></div>
-          <div style="background:#fb923c; height:14px; border-radius:1px; opacity:0.7;"></div>
-          <div style="background:#fb923c; height:14px; border-radius:1px; opacity:0.7;"></div>
-          <div style="background:#fb923c; height:14px; border-radius:1px; opacity:0.7;"></div>
-          <div style="background:#fb923c; height:14px; border-radius:1px; opacity:0.7;"></div>
-          <div style="background:#fb923c; height:14px; border-radius:1px; opacity:0.7;"></div>
-          <div style="background:#fb923c; height:14px; border-radius:1px; opacity:0.7;"></div>
-          <div style="background:#fb923c; height:14px; border-radius:1px; opacity:0.7;"></div>
-          <div style="background:#fb923c; height:14px; border-radius:1px; opacity:0.7;"></div>
-          <div style="background:#fb923c; height:14px; border-radius:1px; opacity:0.7;"></div>
-          <div style="background:#fb923c; height:14px; border-radius:1px; opacity:0.7;"></div>
-          <div style="background:#fb923c; height:14px; border-radius:1px; opacity:0.7;"></div>
-          <div style="background:#fb923c; height:14px; border-radius:1px; opacity:0.7;"></div>
+      <!-- Live Wall Diagram -->
+      <div class="section-title" style="margin:0 -16px; padding:6px 10px;">LIVE WALL DIAGRAM</div>
+      <div class="box" style="height:160px; border-radius:8px; background:#fff8f0; border-color:#f97316; border-style:dashed; flex-direction:column; gap:8px;">
+        <div style="display:grid; grid-template-columns:repeat(8,1fr); gap:2px; width:180px;">
+          <div style="background:#fb923c; height:12px; border-radius:1px; opacity:0.7;"></div>
+          <div style="background:#fb923c; height:12px; border-radius:1px; opacity:0.7;"></div>
+          <div style="background:#fb923c; height:12px; border-radius:1px; opacity:0.7;"></div>
+          <div style="background:#fb923c; height:12px; border-radius:1px; opacity:0.7;"></div>
+          <div style="background:#fb923c; height:12px; border-radius:1px; opacity:0.7;"></div>
+          <div style="background:#fb923c; height:12px; border-radius:1px; opacity:0.7;"></div>
+          <div style="background:#fb923c; height:12px; border-radius:1px; opacity:0.7;"></div>
+          <div style="background:#fb923c; height:12px; border-radius:1px; opacity:0.7;"></div>
+          <div style="background:#fb923c; height:12px; border-radius:1px; opacity:0.5;"></div>
+          <div style="background:#fb923c; height:12px; border-radius:1px; opacity:0.5;"></div>
+          <div style="background:#fb923c; height:12px; border-radius:1px; opacity:0.5;"></div>
+          <div style="background:#fb923c; height:12px; border-radius:1px; opacity:0.5;"></div>
+          <div style="background:#fb923c; height:12px; border-radius:1px; opacity:0.5;"></div>
+          <div style="background:#fb923c; height:12px; border-radius:1px; opacity:0.5;"></div>
+          <div style="background:#fb923c; height:12px; border-radius:1px; opacity:0.5;"></div>
+          <div style="background:#fb923c; height:12px; border-radius:1px; opacity:0.5;"></div>
         </div>
-        <div style="font-size:9px; color:#888;">&larr; 8m &rarr; | &#8597; 2.5m | "Live wall preview"</div>
-        <div style="font-size:9px; color:#f97316;">Dimension labels: width below, height right (rotated)</div>
+        <div style="font-size:9px; color:#888;">Live wall preview (SVG)</div>
       </div>
     </div>
 
     <!-- RIGHT: Results Panel -->
     <div style="flex:1; padding:16px; display:flex; flex-direction:column; gap:12px; background:#fafafa;">
-      <div class="section-title" style="margin:-16px -16px 0; padding:6px 10px;">RIGHT PANEL — CALCULATION RESULTS (updates live)</div>
+      <div class="section-title" style="margin:-16px -16px 0; padding:6px 10px;">CALCULATION RESULTS</div>
       <div style="height:8px;"></div>
-
-      <div class="formula">
-        calculateWall(8, 2.5):<br>
-        area = 8 &times; 2.5 = 20 m&sup2;<br>
-        bricks = ceil(20 &times; 50) = 1,000 bricks<br>
-        cement = ceil(1000 / 150) = 7 bags<br>
-        sand = ceil(20 &times; 0.02 &times; 100)/100 = 0.40 m&sup3;
-      </div>
 
       <!-- Result Cards -->
       <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
         <div style="border:1.5px solid #ddd; border-radius:12px; padding:10px; background:#fff;">
           <div style="font-size:9px; color:#888; margin-bottom:4px;">BRICKS REQUIRED</div>
-          <div style="font-size:22px; font-weight:bold; color:#f97316;">1,000</div>
-          <div style="font-size:9px; color:#888;">standard clay bricks</div>
+          <div style="font-size:22px; font-weight:bold; color:#f97316;">—</div>
+          <div style="font-size:9px; color:#888;">bricks</div>
         </div>
         <div style="border:1.5px solid #ddd; border-radius:12px; padding:10px; background:#fff;">
           <div style="font-size:9px; color:#888; margin-bottom:4px;">CEMENT BAGS</div>
-          <div style="font-size:22px; font-weight:bold; color:#f97316;">7</div>
-          <div style="font-size:9px; color:#888;">bags (50kg OPC)</div>
+          <div style="font-size:22px; font-weight:bold; color:#f97316;">—</div>
+          <div style="font-size:9px; color:#888;">bags (50kg)</div>
         </div>
         <div style="border:1.5px solid #ddd; border-radius:12px; padding:10px; background:#fff;">
           <div style="font-size:9px; color:#888; margin-bottom:4px;">SAND REQUIRED</div>
-          <div style="font-size:22px; font-weight:bold; color:#f97316;">0.40</div>
+          <div style="font-size:22px; font-weight:bold; color:#f97316;">—</div>
           <div style="font-size:9px; color:#888;">cubic metres</div>
         </div>
         <div style="border:1.5px solid #ddd; border-radius:12px; padding:10px; background:#fff;">
           <div style="font-size:9px; color:#888; margin-bottom:4px;">TOTAL AREA</div>
-          <div style="font-size:22px; font-weight:bold; color:#f97316;">20</div>
-          <div style="font-size:9px; color:#888;">m&sup2; wall surface</div>
+          <div style="font-size:22px; font-weight:bold; color:#f97316;">—</div>
+          <div style="font-size:9px; color:#888;">m² wall surface</div>
         </div>
       </div>
 
@@ -132,25 +121,24 @@
       <div style="border:2px solid #f97316; border-radius:16px; padding:12px; background:#fff8f0; display:flex; flex-direction:column; gap:8px;">
         <div style="font-size:11px; font-weight:bold; color:#1e293b;">Recommended Bundle</div>
         <div style="display:flex; justify-content:space-between; font-size:10px; color:#555;">
-          <span>Cape Facebrick &times; 1,000</span><span style="font-weight:bold;">R1,250.00</span>
+          <span>[Bricks product] × qty</span><span class="ph" style="width:60px; height:12px; display:inline-block;"></span>
         </div>
         <div style="display:flex; justify-content:space-between; font-size:10px; color:#555;">
-          <span>OPC Cement &times; 7 bags</span><span style="font-weight:bold;">R623.00</span>
+          <span>[Cement product] × qty</span><span class="ph" style="width:60px; height:12px; display:inline-block;"></span>
         </div>
         <div style="border-top:1px solid #fed7aa; padding-top:6px; display:flex; justify-content:space-between; font-size:11px; font-weight:bold;">
           <span>After 10% bundle discount:</span>
-          <span style="color:#f97316;">R1,236.30</span>
+          <span style="color:#f97316;">R [total]</span>
         </div>
-        <div class="box" style="height:44px; background:#f97316; color:#fff; border-color:#f97316; border-radius:12px; font-size:11px; font-weight:bold; gap:8px;">
+        <div class="box" style="height:44px; background:#f97316; color:#fff; border-color:#f97316; border-radius:12px; font-size:11px; font-weight:bold;">
           &#128722; Add Bundle to Cart (10% Off)
         </div>
       </div>
-      <div class="annotation">&larr; Bundle found by matching products DB where stockQuantity &ge; required</div>
-      <div class="annotation">&larr; On click: addItem(bricks, qty) + addItem(cement, qty) + applyBundleDiscount() | Button turns green for 2s</div>
     </div>
   </div>
 
   <!-- Footer -->
+  <div class="section-title">FOOTER</div>
   <div class="box dark" style="height:60px; font-size:11px;">FOOTER — Same as Landing Page</div>
 </div>
 </body>

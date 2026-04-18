@@ -10,12 +10,11 @@
   .screen { max-width: 1024px; margin: 0 auto; border: 2px solid #222; }
   .box { background: #e8e8e8; border: 1.5px solid #999; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 11px; color: #666; letter-spacing: 0.5px; }
   .box.dark { background: #444; color: #ccc; border-color: #222; }
-  .annotation { font-size: 10px; color: #c0392b; font-style: italic; padding: 4px 10px; }
   .row { display: flex; }
   .col { flex: 1; }
   .section-title { font-size: 10px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; padding: 6px 10px; background: #f5f5f5; border-bottom: 1px solid #ddd; color: #555; }
   .gap { height: 8px; background: #fff; }
-  .note { font-size: 10px; color: #c0392b; padding: 4px 10px; border-left: 3px solid #c0392b; margin: 6px 10px; }
+  .ph { background: #e8e8e8; border-radius: 4px; }
 </style>
 </head>
 <body>
@@ -23,83 +22,74 @@
 <div class="screen">
 
   <!-- Navbar -->
+  <div class="section-title">NAVBAR</div>
   <div class="box" style="height:52px; border-bottom:2px solid #222; font-weight:bold; background:#f5f5f5; justify-content:space-between; padding:0 16px;">
     <span>LOGO: BuildBridge SA</span>
     <span style="font-size:10px; color:#888;">Home | Shop | Smart Estimator | About (active) | Contact</span>
-    <span style="font-size:10px;">🌙 ♡ 🛒</span>
+    <span style="font-size:10px;">&#9790; &#9825; &#128722;</span>
   </div>
 
-  <!-- Section 1: Hero -->
-  <div class="section-title">SECTION 1 — ABOUT HERO (bg-slate-900, py-40)</div>
-  <div class="box dark" style="height:200px; flex-direction:column; gap:12px; position:relative; overflow:hidden;">
-    <div style="position:absolute; inset:0; opacity:0.06; background: repeating-linear-gradient(0deg, transparent, transparent 39px, #f97316 39px, #f97316 40px), repeating-linear-gradient(90deg, transparent, transparent 39px, #f97316 39px, #f97316 40px);"></div>
-    <div style="font-size:9px; color:#aaa; letter-spacing:1px; z-index:1;">Grain SVG overlay (4% opacity)</div>
-    <div style="z-index:1; display:flex; gap:12px; flex-wrap:wrap; justify-content:center;">
-      <div class="box" style="width:80px; height:36px; background:transparent; border:1px dashed #aaa; color:#fff; font-size:11px; font-weight:bold;">Building</div>
-      <div class="box" style="width:30px; height:36px; background:transparent; border:1px dashed #aaa; color:#fff; font-size:11px; font-weight:bold;">a</div>
-      <div class="box" style="width:70px; height:36px; background:transparent; border:1px dashed #aaa; color:#fff; font-size:11px; font-weight:bold;">Better</div>
-      <div class="box" style="width:70px; height:36px; background:transparent; border:1px dashed #aaa; color:#fff; font-size:11px; font-weight:bold;">South</div>
-      <div class="box" style="width:65px; height:36px; background:transparent; border:1px dashed #aaa; color:#fff; font-size:11px; font-weight:bold;">Africa</div>
+  <!-- Hero -->
+  <div class="section-title">ABOUT HERO</div>
+  <div class="box dark" style="height:180px; flex-direction:column; gap:14px; padding:24px;">
+    <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
+      <div class="box" style="width:80px; height:34px; background:transparent; border:1px dashed #666; color:#ccc; font-size:11px;">Building</div>
+      <div class="box" style="width:30px; height:34px; background:transparent; border:1px dashed #666; color:#ccc; font-size:11px;">a</div>
+      <div class="box" style="width:70px; height:34px; background:transparent; border:1px dashed #666; color:#ccc; font-size:11px;">Better</div>
+      <div class="box" style="width:70px; height:34px; background:transparent; border:1px dashed #666; color:#ccc; font-size:11px;">South</div>
+      <div class="box" style="width:65px; height:34px; background:transparent; border:1px dashed #666; color:#ccc; font-size:11px;">Africa</div>
     </div>
-    <div style="z-index:1; width:220px; height:3px; background:#f97316; border-radius:2px;"></div>
-    <div class="box" style="z-index:1; width:420px; height:18px; background:transparent; border:1px dashed #666; color:#aaa; font-size:10px;">Subheading: "Turning construction surplus into community opportunity..."</div>
+    <div style="width:200px; height:3px; background:#f97316; border-radius:2px;"></div>
+    <div class="ph" style="width:340px; height:14px; opacity:0.3;"></div>
   </div>
-  <div class="annotation">← Each word reveals via clip-path: inset(0 100% 0 0) → inset(0 0% 0 0), staggered 80ms | Orange underline animates width 0 → 280px on mount</div>
 
   <div class="gap"></div>
 
-  <!-- Section 2: Mission Quote -->
-  <div class="section-title">SECTION 2 — MISSION PULL-QUOTE (IntersectionObserver slide-in from left)</div>
-  <div style="padding:32px 24px; border-bottom:1.5px solid #ddd; border-left:4px solid #f97316; background:#f8fafc;">
-    <div style="font-size:9px; color:#888; margin-bottom:8px; font-style:italic;">Slides in from left when scrolled into view (opacity 0→1, translateX -48px→0)</div>
-    <div class="box" style="height:16px; width:90%; border:none; background:#e0e0e0; margin-bottom:8px;"></div>
-    <div class="box" style="height:16px; width:75%; border:none; background:#e0e0e0; margin-bottom:8px;"></div>
-    <div class="box" style="height:12px; width:50%; border:none; background:#e8e8e8;"></div>
-    <div style="font-size:10px; color:#f97316; margin-top:10px; letter-spacing:1px; text-transform:uppercase;">— BuildBridge SA Mission Statement</div>
+  <!-- Mission Quote -->
+  <div class="section-title">MISSION QUOTE</div>
+  <div style="padding:28px 24px; border-bottom:1.5px solid #ddd; border-left:4px solid #f97316; background:#f8fafc;">
+    <div class="ph" style="height:14px; width:90%; margin-bottom:8px;"></div>
+    <div class="ph" style="height:14px; width:75%; margin-bottom:8px;"></div>
+    <div class="ph" style="height:12px; width:50%; margin-bottom:10px;"></div>
+    <div style="font-size:10px; color:#f97316; letter-spacing:1px; text-transform:uppercase;">— BuildBridge SA Mission Statement</div>
   </div>
-  <div class="annotation">← Quote: "Every tonne of surplus concrete diverted is a foundation laid for someone's future."</div>
 
   <div class="gap"></div>
 
-  <!-- Section 3: Blueprint Timeline -->
-  <div class="section-title">SECTION 3 — ANIMATED BLUEPRINT TIMELINE (SVG stroke-dashoffset draw on scroll)</div>
-  <div style="padding:24px; border-bottom:1.5px solid #ddd; position:relative;">
+  <!-- Blueprint Timeline -->
+  <div class="section-title">OUR JOURNEY TIMELINE</div>
+  <div style="padding:24px; border-bottom:1.5px solid #ddd;">
     <div style="text-align:center; margin-bottom:20px;">
-      <div style="font-size:10px; color:#f97316; letter-spacing:2px; text-transform:uppercase;">Our Journey</div>
-      <div style="font-size:16px; font-weight:bold; margin-top:4px;">From Idea to Impact</div>
+      <div style="font-size:16px; font-weight:bold;">From Idea to Impact</div>
     </div>
-
-    <!-- Timeline items -->
     <div style="position:relative;">
-      <!-- SVG line annotation -->
-      <div class="note">SVG vertical line: stroke-dashoffset animates from totalLength → 0 over 2s (cubic ease) as section enters viewport</div>
 
       <!-- Milestone 1: Left -->
       <div class="row" style="margin-bottom:20px; align-items:center; gap:8px;">
         <div style="flex:5;">
           <div style="border:1.5px solid #999; border-radius:12px; padding:10px; background:#fff;">
             <div class="box" style="width:45px; height:20px; background:#f97316; color:#fff; border-color:#f97316; border-radius:6px; font-size:9px; font-weight:bold; margin-bottom:6px;">2022</div>
-            <div class="box" style="height:12px; width:90%; border:none; background:#e8e8e8; margin-bottom:4px;"></div>
-            <div class="box" style="height:10px; width:100%; border:none; background:#efefef;"></div>
+            <div class="ph" style="height:11px; width:90%; margin-bottom:4px;"></div>
+            <div class="ph" style="height:10px; width:100%;"></div>
           </div>
         </div>
         <div style="flex:2; display:flex; justify-content:center;">
           <div style="width:14px; height:14px; border-radius:50%; border:2px solid #f97316; background:#f97316;"></div>
         </div>
-        <div style="flex:5; opacity:0.2;"><div style="border:1.5px dashed #ccc; border-radius:12px; padding:10px; height:60px;"></div></div>
+        <div style="flex:5; opacity:0.15;"><div style="border:1.5px dashed #ccc; border-radius:12px; height:58px;"></div></div>
       </div>
 
       <!-- Milestone 2: Right -->
       <div class="row" style="margin-bottom:20px; align-items:center; gap:8px;">
-        <div style="flex:5; opacity:0.2;"><div style="border:1.5px dashed #ccc; border-radius:12px; padding:10px; height:60px;"></div></div>
+        <div style="flex:5; opacity:0.15;"><div style="border:1.5px dashed #ccc; border-radius:12px; height:58px;"></div></div>
         <div style="flex:2; display:flex; justify-content:center;">
           <div style="width:14px; height:14px; border-radius:50%; border:2px solid #f97316; background:#f97316;"></div>
         </div>
         <div style="flex:5;">
           <div style="border:1.5px solid #999; border-radius:12px; padding:10px; background:#fff;">
             <div class="box" style="width:45px; height:20px; background:#f97316; color:#fff; border-color:#f97316; border-radius:6px; font-size:9px; font-weight:bold; margin-bottom:6px;">2023</div>
-            <div class="box" style="height:12px; width:90%; border:none; background:#e8e8e8; margin-bottom:4px;"></div>
-            <div class="box" style="height:10px; width:100%; border:none; background:#efefef;"></div>
+            <div class="ph" style="height:11px; width:90%; margin-bottom:4px;"></div>
+            <div class="ph" style="height:10px; width:100%;"></div>
           </div>
         </div>
       </div>
@@ -109,43 +99,41 @@
         <div style="flex:5;">
           <div style="border:1.5px solid #999; border-radius:12px; padding:10px; background:#fff;">
             <div class="box" style="width:45px; height:20px; background:#f97316; color:#fff; border-color:#f97316; border-radius:6px; font-size:9px; font-weight:bold; margin-bottom:6px;">2024</div>
-            <div class="box" style="height:12px; width:90%; border:none; background:#e8e8e8; margin-bottom:4px;"></div>
-            <div class="box" style="height:10px; width:100%; border:none; background:#efefef;"></div>
+            <div class="ph" style="height:11px; width:90%; margin-bottom:4px;"></div>
+            <div class="ph" style="height:10px; width:100%;"></div>
           </div>
         </div>
         <div style="flex:2; display:flex; justify-content:center;">
           <div style="width:14px; height:14px; border-radius:50%; border:2px solid #f97316; background:#f97316;"></div>
         </div>
-        <div style="flex:5; opacity:0.2;"><div style="border:1.5px dashed #ccc; border-radius:12px; padding:10px; height:60px;"></div></div>
+        <div style="flex:5; opacity:0.15;"><div style="border:1.5px dashed #ccc; border-radius:12px; height:58px;"></div></div>
       </div>
 
       <!-- Milestone 4: Right -->
       <div class="row" style="align-items:center; gap:8px;">
-        <div style="flex:5; opacity:0.2;"><div style="border:1.5px dashed #ccc; border-radius:12px; padding:10px; height:60px;"></div></div>
+        <div style="flex:5; opacity:0.15;"><div style="border:1.5px dashed #ccc; border-radius:12px; height:58px;"></div></div>
         <div style="flex:2; display:flex; justify-content:center;">
           <div style="width:14px; height:14px; border-radius:50%; border:2px solid #f97316; background:#f97316;"></div>
         </div>
         <div style="flex:5;">
           <div style="border:1.5px solid #999; border-radius:12px; padding:10px; background:#fff;">
             <div class="box" style="width:45px; height:20px; background:#f97316; color:#fff; border-color:#f97316; border-radius:6px; font-size:9px; font-weight:bold; margin-bottom:6px;">2026</div>
-            <div class="box" style="height:12px; width:90%; border:none; background:#e8e8e8; margin-bottom:4px;"></div>
-            <div class="box" style="height:10px; width:100%; border:none; background:#efefef;"></div>
+            <div class="ph" style="height:11px; width:90%; margin-bottom:4px;"></div>
+            <div class="ph" style="height:10px; width:100%;"></div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="annotation">← Milestones alternate left/right | Dot scales 0→1 with transitionDelay per index | Cards fade up (translateY 32px→0)</div>
-  <div class="annotation">← Milestones: 2022 Founded | 2023 100+ Suppliers | 2024 1,200 Builders | 2026 R1.2M Saved</div>
 
   <div class="gap"></div>
 
-  <!-- Section 4: Impact Stats Band -->
-  <div class="section-title">SECTION 4 — IMPACT STATS BAND (reuses StatsRow component, bg-slate-900)</div>
-  <div class="row" style="background:#1e293b; height:100px; border-bottom:1.5px solid #ddd;">
+  <!-- Impact Stats -->
+  <div class="section-title">IMPACT STATS</div>
+  <div class="row" style="background:#1e293b; height:90px; border-bottom:1.5px solid #ddd;">
     <div class="box col" style="background:transparent; border:none; border-right:1px solid #334155; flex-direction:column; gap:4px;">
       <div style="font-size:22px; font-weight:bold; color:#f97316;">2,400+</div>
-      <div style="font-size:10px; color:#94a3b8;">Tonnes Diverted from Landfill</div>
+      <div style="font-size:10px; color:#94a3b8;">Tonnes Diverted</div>
     </div>
     <div class="box col" style="background:transparent; border:none; border-right:1px solid #334155; flex-direction:column; gap:4px;">
       <div style="font-size:22px; font-weight:bold; color:#f97316;">R1.2M</div>
@@ -153,46 +141,40 @@
     </div>
     <div class="box col" style="background:transparent; border:none; flex-direction:column; gap:4px;">
       <div style="font-size:22px; font-weight:bold; color:#f97316;">340+</div>
-      <div style="font-size:10px; color:#94a3b8;">Community Builders Helped</div>
+      <div style="font-size:10px; color:#94a3b8;">Community Builders</div>
     </div>
   </div>
-  <div class="annotation">← Count-up animation via requestAnimationFrame on IntersectionObserver entry | Oversized faded "02" watermark text behind stats</div>
 
   <div class="gap"></div>
 
-  <!-- Section 5: Values Grid -->
-  <div class="section-title">SECTION 5 — VALUES GRID (3 cards, 3D tilt on hover, fade-in on scroll)</div>
-  <div style="padding:24px; border-bottom:1.5px solid #ddd; background:#f8fafc;">
-    <div style="text-align:center; margin-bottom:16px;">
-      <div style="font-size:10px; color:#f97316; letter-spacing:2px; text-transform:uppercase;">What We Stand For</div>
-      <div style="font-size:16px; font-weight:bold; margin-top:4px;">Our Values</div>
-    </div>
+  <!-- Values Grid -->
+  <div class="section-title">OUR VALUES</div>
+  <div style="padding:20px; border-bottom:1.5px solid #ddd; background:#f8fafc;">
     <div class="row" style="gap:10px;">
       <div style="flex:1; border:1.5px solid #999; border-radius:16px; padding:16px; background:#fff;">
-        <div class="box" style="width:48px; height:48px; border-radius:50%; background:#fff3e0; border-color:#f97316; margin-bottom:10px; font-size:18px;">♻</div>
+        <div class="box" style="width:44px; height:44px; border-radius:50%; border-color:#f97316; margin-bottom:10px; font-size:18px;">♻</div>
         <div style="font-size:12px; font-weight:bold; margin-bottom:6px;">Circular Economy</div>
-        <div class="box" style="height:10px; width:100%; border:none; background:#efefef; margin-bottom:3px;"></div>
-        <div class="box" style="height:10px; width:85%; border:none; background:#efefef;"></div>
+        <div class="ph" style="height:10px; width:100%; margin-bottom:3px;"></div>
+        <div class="ph" style="height:10px; width:80%;"></div>
       </div>
       <div style="flex:1; border:2px solid #f97316; border-radius:16px; padding:16px; background:#fff;">
-        <div class="box" style="width:48px; height:48px; border-radius:50%; background:#fff3e0; border-color:#f97316; margin-bottom:10px; font-size:18px;">👥</div>
+        <div class="box" style="width:44px; height:44px; border-radius:50%; border-color:#f97316; margin-bottom:10px; font-size:18px;">&#128101;</div>
         <div style="font-size:12px; font-weight:bold; margin-bottom:6px;">Community First</div>
-        <div class="box" style="height:10px; width:100%; border:none; background:#efefef; margin-bottom:3px;"></div>
-        <div class="box" style="height:10px; width:90%; border:none; background:#efefef;"></div>
+        <div class="ph" style="height:10px; width:100%; margin-bottom:3px;"></div>
+        <div class="ph" style="height:10px; width:85%;"></div>
       </div>
       <div style="flex:1; border:1.5px solid #999; border-radius:16px; padding:16px; background:#fff;">
-        <div class="box" style="width:48px; height:48px; border-radius:50%; background:#fff3e0; border-color:#f97316; margin-bottom:10px; font-size:18px;">📄</div>
+        <div class="box" style="width:44px; height:44px; border-radius:50%; border-color:#f97316; margin-bottom:10px; font-size:18px;">&#128196;</div>
         <div style="font-size:12px; font-weight:bold; margin-bottom:6px;">Radical Transparency</div>
-        <div class="box" style="height:10px; width:100%; border:none; background:#efefef; margin-bottom:3px;"></div>
-        <div class="box" style="height:10px; width:75%; border:none; background:#efefef;"></div>
+        <div class="ph" style="height:10px; width:100%; margin-bottom:3px;"></div>
+        <div class="ph" style="height:10px; width:70%;"></div>
       </div>
     </div>
   </div>
-  <div class="annotation">← Cards: border-2 border-transparent hover:border-orange-500 | 3D tilt: perspective(1000px) rotateX/Y on mousemove | Staggered fade-up with animationDelay per index</div>
-  <div class="annotation">← Middle card shown in hover state (orange border) for illustration</div>
 
   <!-- Footer -->
   <div class="gap"></div>
+  <div class="section-title">FOOTER</div>
   <div class="box dark" style="height:60px; font-size:11px;">FOOTER — Logo | Navigate (Home, Shop, Estimator, About, Contact) | Impact stat</div>
 
 </div>

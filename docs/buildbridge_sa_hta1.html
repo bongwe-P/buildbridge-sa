@@ -1,0 +1,119 @@
+<style>
+.hta { padding: 0.5rem 0 0.25rem; font-family: system-ui, -apple-system, sans-serif; color: #111; background: #e8e8e8; }
+.hta-sr { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+.hta-task { background: #fff; border: 1.5px solid #888; border-radius: 10px; padding: 12px 18px; max-width: 440px; margin: 0 auto 10px; text-align: center; }
+.hta-task .ttl { font-size: 15px; font-weight: 700; line-height: 1.3; color: #111; }
+.hta-task .sub { font-size: 12px; color: #333; margin-top: 3px; }
+.hta-trunk { width: 2px; height: 14px; background: #666; margin: 0 auto; }
+.hta-plan { background: #fff3cd; border: 1.5px solid #b8860b; border-radius: 7px; padding: 9px 14px; max-width: 560px; margin: 0 auto 16px; font-size: 12.5px; line-height: 1.5; color: #4a2800; }
+.hta-plan .lbl { font-weight: 600; }
+.hta-tree { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; }
+.hta-head { background: #c8f0e6; border: 1.5px solid #0a7a5e; border-radius: 7px; padding: 8px 4px; text-align: center; font-size: 12.5px; font-weight: 700; line-height: 1.3; color: #053d30; margin-bottom: 6px; min-height: 44px; display: flex; align-items: center; justify-content: center; }
+.hta-items { list-style: none; margin: 0 0 0 6px; padding: 2px 0 2px 8px; border-left: 2px dashed #666; font-size: 12px; line-height: 1.5; color: #111; }
+.hta-items > li { padding: 2px 0; }
+.hta-subs { list-style: none; margin: 2px 0 3px 4px; padding: 0 0 0 8px; border-left: 1.5px dashed #888; }
+.hta-subs > li { font-size: 11px; color: #333; padding: 1.5px 0; line-height: 1.4; }
+</style>
+<h2 class="hta-sr">Hierarchical task analysis of purchasing surplus materials via BuildBridge SA, with five main subtasks and their decomposed steps.</h2>
+<div class="hta">
+  <div class="hta-task">
+    <div class="ttl">0. Purchase surplus construction materials</div>
+    <div class="sub">via BuildBridge SA marketplace</div>
+  </div>
+  <div class="hta-trunk"></div>
+  <div class="hta-plan"><span class="lbl">Plan 0.</span> Do 1 → 2 → 3 → 4 → 5 in sequence. If the desired product is not found at step 2, try 2.3 (change filter). If the cart is empty at step 4, return to step 2.</div>
+  <div class="hta-tree">
+    <div>
+      <div class="hta-head">1. Land &amp; orient</div>
+      <ul class="hta-items">
+        <li>1.1 Open site in browser</li>
+        <li>1.2 View hero section (Builders / Contractors)</li>
+        <li>1.3 Read impact stats</li>
+        <li>1.4 Browse category tiles</li>
+        <li>1.5 View featured listings</li>
+      </ul>
+    </div>
+    <div>
+      <div class="hta-head">2. Search &amp; filter</div>
+      <ul class="hta-items">
+        <li>2.1 Click "Shop" in nav</li>
+        <li>2.2 Marketplace page loads</li>
+        <li>2.3 Tick category filter
+          <ul class="hta-subs">
+            <li>2.3.1 Grid updates</li>
+            <li>2.3.2 Result count shows</li>
+          </ul>
+        </li>
+        <li>2.4 Type search keyword
+          <ul class="hta-subs">
+            <li>2.4.1 Live filter on keystroke</li>
+            <li>2.4.2 Non-matches hide</li>
+          </ul>
+        </li>
+        <li>2.5 Clear search field</li>
+      </ul>
+    </div>
+    <div>
+      <div class="hta-head">3. Review &amp; add to cart</div>
+      <ul class="hta-items">
+        <li>3.1 Identify product card</li>
+        <li>3.2 Read name, location, price, badge</li>
+        <li>3.3 (Opt) click heart → wishlist
+          <ul class="hta-subs">
+            <li>3.3.1 Heart fills orange</li>
+            <li>3.3.2 Wishlist count updates</li>
+          </ul>
+        </li>
+        <li>3.4 Click "Add to cart"
+          <ul class="hta-subs">
+            <li>3.4.1 "✓ Added" shown 1.5s</li>
+            <li>3.4.2 Cart icon increments</li>
+          </ul>
+        </li>
+        <li>3.5 Repeat for more products</li>
+      </ul>
+    </div>
+    <div>
+      <div class="hta-head">4. Review cart &amp; discount</div>
+      <ul class="hta-items">
+        <li>4.1 Open cart drawer</li>
+        <li>4.2 Review items list
+          <ul class="hta-subs">
+            <li>4.2.1 Qty, price, remove shown</li>
+          </ul>
+        </li>
+        <li>4.3 Adjust quantity (±)
+          <ul class="hta-subs">
+            <li>4.3.1 Totals update live</li>
+          </ul>
+        </li>
+        <li>4.4 Review pricing breakdown
+          <ul class="hta-subs">
+            <li>4.4.1 Subtotal</li>
+            <li>4.4.2 Bundle −10%</li>
+            <li>4.4.3 Platform fee +7.5%</li>
+            <li>4.4.4 Total in rands</li>
+          </ul>
+        </li>
+        <li>4.5 Click "Proceed to checkout →"</li>
+      </ul>
+    </div>
+    <div>
+      <div class="hta-head">5. Complete checkout</div>
+      <ul class="hta-items">
+        <li>5.1 Checkout page loads</li>
+        <li>5.2 Fill delivery details
+          <ul class="hta-subs">
+            <li>5.2.1 Full name</li>
+            <li>5.2.2 Delivery address</li>
+            <li>5.2.3 Contact number</li>
+          </ul>
+        </li>
+        <li>5.3 Review order summary</li>
+        <li>5.4 Click "Complete order"</li>
+        <li>5.5 Confetti + success message</li>
+        <li>5.6 Order confirmed</li>
+      </ul>
+    </div>
+  </div>
+</div>

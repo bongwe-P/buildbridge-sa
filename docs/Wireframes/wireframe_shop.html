@@ -10,57 +10,56 @@
   .screen { max-width: 1024px; margin: 0 auto; border: 2px solid #222; }
   .box { background: #e8e8e8; border: 1.5px solid #999; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 11px; color: #666; letter-spacing: 0.5px; }
   .box.dark { background: #444; color: #ccc; border-color: #222; }
-  .annotation { font-size: 10px; color: #c0392b; font-style: italic; padding: 4px 10px; }
   .row { display: flex; }
   .col { flex: 1; }
   .section-title { font-size: 10px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; padding: 6px 10px; background: #f5f5f5; border-bottom: 1px solid #ddd; color: #555; }
   .gap { height: 8px; background: #fff; }
-  .note { font-size: 10px; color: #c0392b; padding: 4px 10px; border-left: 3px solid #c0392b; margin: 6px 10px; }
+  .ph { background: #e8e8e8; border-radius: 4px; }
 </style>
 </head>
 <body>
 <div class="page-label">Wireframe — BuildBridge SA — Shop / Product Catalog (/shop)</div>
 <div class="screen">
 
-  <!-- Navbar (same as landing) -->
+  <!-- Navbar -->
+  <div class="section-title">NAVBAR</div>
   <div class="box" style="height:52px; border-bottom:2px solid #222; font-weight:bold; background:#f5f5f5; justify-content:space-between; padding:0 16px;">
     <span>LOGO: BuildBridge SA</span>
     <span style="font-size:10px; color:#888;">Home | Shop (active) | Smart Estimator | About | Contact</span>
     <span style="font-size:10px;">&#9790; &#9825; &#128722;</span>
   </div>
 
+  <!-- Page Header -->
+  <div style="padding:20px; border-bottom:1.5px solid #ddd;">
+    <div style="font-size:20px; font-weight:bold; margin-bottom:4px;">Surplus <span style="color:#f97316;">Marketplace</span></div>
+    <div style="font-size:11px; color:#888;">12 listings available across Cape Town</div>
+  </div>
+
   <!-- Search Bar -->
-  <div class="section-title">SEARCH BAR (sticky, live filter on keystroke)</div>
-  <div style="padding:12px; border-bottom:1.5px solid #ddd; display:flex; gap:10px; align-items:center;">
-    <div class="box" style="flex:1; height:44px; border-radius:12px; gap:8px;">
+  <div class="section-title">SEARCH BAR</div>
+  <div style="padding:12px; border-bottom:1.5px solid #ddd;">
+    <div class="box" style="height:44px; border-radius:12px; gap:8px;">
       <span>&#128269;</span>
-      <span>Search materials, locations...</span>
+      <span style="color:#999;">Search materials...</span>
     </div>
   </div>
-  <div class="annotation">&larr; No button needed — filters live on every keystroke | Results count shown: "Showing 8 of 12 products"</div>
 
   <div class="gap"></div>
 
   <!-- Main content: sidebar + grid -->
-  <div class="row" style="border-bottom:1.5px solid #ddd; min-height:500px;">
+  <div class="row" style="border-bottom:1.5px solid #ddd; min-height:400px;">
 
     <!-- Filter Sidebar -->
-    <div style="width:220px; border-right:1.5px solid #ddd; padding:12px;">
-      <div class="section-title" style="margin: -12px -12px 10px; padding:6px 10px;">FILTER SIDEBAR</div>
+    <div style="width:200px; border-right:1.5px solid #ddd; padding:12px;">
+      <div class="section-title" style="margin:-12px -12px 10px; padding:6px 10px;">FILTER SIDEBAR</div>
 
       <div style="font-size:10px; font-weight:bold; margin-bottom:6px; color:#555;">CATEGORY</div>
-      <div style="display:flex; flex-direction:column; gap:6px; margin-bottom:12px;">
-        <div style="display:flex; gap:6px; align-items:center; font-size:11px;"><div class="box" style="width:14px;height:14px;border-radius:2px;background:#f97316;border-color:#f97316;"></div> Bricks (18)</div>
-        <div style="display:flex; gap:6px; align-items:center; font-size:11px;"><div class="box" style="width:14px;height:14px;border-radius:2px;"></div> Cement (7)</div>
-        <div style="display:flex; gap:6px; align-items:center; font-size:11px;"><div class="box" style="width:14px;height:14px;border-radius:2px;"></div> Timber (5)</div>
-        <div style="display:flex; gap:6px; align-items:center; font-size:11px;"><div class="box" style="width:14px;height:14px;border-radius:2px;"></div> Roofing (4)</div>
-        <div style="display:flex; gap:6px; align-items:center; font-size:11px;"><div class="box" style="width:14px;height:14px;border-radius:2px;"></div> Scaffolding (3)</div>
-      </div>
-
-      <div style="font-size:10px; font-weight:bold; margin-bottom:6px; color:#555; border-top:1px solid #eee; padding-top:10px;">CONDITION</div>
-      <div style="display:flex; flex-direction:column; gap:6px; margin-bottom:12px;">
-        <div style="display:flex; gap:6px; align-items:center; font-size:11px;"><div class="box" style="width:14px;height:14px;border-radius:2px;"></div> New Surplus</div>
-        <div style="display:flex; gap:6px; align-items:center; font-size:11px;"><div class="box" style="width:14px;height:14px;border-radius:2px;"></div> Reclaimed</div>
+      <div style="display:flex; flex-direction:column; gap:6px; margin-bottom:14px;">
+        <div style="display:flex; gap:6px; align-items:center; font-size:11px;"><div class="box" style="width:14px;height:14px;border-radius:2px;background:#f97316;border-color:#f97316;"></div> Bricks</div>
+        <div style="display:flex; gap:6px; align-items:center; font-size:11px;"><div class="box" style="width:14px;height:14px;border-radius:2px;"></div> Cement</div>
+        <div style="display:flex; gap:6px; align-items:center; font-size:11px;"><div class="box" style="width:14px;height:14px;border-radius:2px;"></div> Timber</div>
+        <div style="display:flex; gap:6px; align-items:center; font-size:11px;"><div class="box" style="width:14px;height:14px;border-radius:2px;"></div> Roofing</div>
+        <div style="display:flex; gap:6px; align-items:center; font-size:11px;"><div class="box" style="width:14px;height:14px;border-radius:2px;"></div> Scaffolding</div>
       </div>
 
       <div class="box" style="width:100%; height:32px; background:#fff; border-color:#999; font-size:10px; border-radius:8px;">Clear All Filters</div>
@@ -68,52 +67,42 @@
 
     <!-- Product Grid -->
     <div style="flex:1; padding:12px;">
-      <div class="section-title" style="margin:-12px -12px 10px; padding:6px 10px;">PRODUCT GRID (3 columns, skeleton shimmer on load)</div>
-
-      <!-- Skeleton state annotation -->
-      <div class="note">On initial load: 6 skeleton cards shown for 600ms (shimmer animation), then replaced with real products</div>
+      <div class="section-title" style="margin:-12px -12px 10px; padding:6px 10px;">PRODUCT GRID</div>
 
       <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px;">
-        <!-- Product Card 1 -->
+        <!-- Card 1 -->
         <div style="border:1.5px solid #999; border-radius:12px; overflow:hidden;">
-          <div class="box" style="height:120px; border-radius:0; border:none; flex-direction:column; position:relative;">
-            [PRODUCT IMAGE]
-            <div class="box" style="position:absolute;top:6px;left:6px;width:80px;height:18px;background:#ef4444;color:#fff;border:none;font-size:9px;border-radius:4px;">Urgent Clearance</div>
-            <div class="box" style="position:absolute;top:6px;right:6px;width:60px;height:18px;background:#22c55e;color:#fff;border:none;font-size:9px;border-radius:4px;">-55% off</div>
-            <div class="box" style="position:absolute;bottom:6px;right:6px;width:28px;height:28px;border-radius:50%;background:#fff;border-color:#ddd;font-size:12px;">&#9825;</div>
-          </div>
+          <div class="box" style="height:110px; border-radius:0; border:none;">[Product Image]</div>
           <div style="padding:8px;">
-            <div style="font-size:9px; color:#0ea5e9; margin-bottom:3px;">&#128205; Parow, Cape Town</div>
-            <div class="box" style="height:12px; width:90%; margin-bottom:6px; border:none; background:#e8e8e8;"></div>
+            <div class="ph" style="height:10px; width:55%; margin-bottom:6px;"></div>
+            <div class="ph" style="height:13px; width:85%; margin-bottom:8px;"></div>
             <div style="display:flex; justify-content:space-between; align-items:center;">
-              <div><span style="font-size:14px;font-weight:bold;color:#f97316;">R1.25</span><span style="font-size:9px;color:#888;">/brick</span></div>
-              <div class="box" style="width:55px;height:26px;background:#f97316;color:#fff;border-color:#f97316;font-size:9px;border-radius:8px;">Add</div>
+              <div class="ph" style="height:16px; width:50px;"></div>
+              <div class="box" style="width:50px;height:26px;background:#f97316;color:#fff;border-color:#f97316;font-size:9px;border-radius:8px;">Add</div>
             </div>
           </div>
         </div>
-        <!-- Product Card 2 -->
+        <!-- Card 2 -->
         <div style="border:1.5px solid #999; border-radius:12px; overflow:hidden;">
-          <div class="box" style="height:120px; border-radius:0; border:none; flex-direction:column;">
-            [PRODUCT IMAGE]
-          </div>
+          <div class="box" style="height:110px; border-radius:0; border:none;">[Product Image]</div>
           <div style="padding:8px;">
-            <div style="font-size:9px; color:#0ea5e9; margin-bottom:3px;">&#128205; Bellville</div>
-            <div class="box" style="height:12px; width:85%; margin-bottom:6px; border:none; background:#e8e8e8;"></div>
+            <div class="ph" style="height:10px; width:45%; margin-bottom:6px;"></div>
+            <div class="ph" style="height:13px; width:80%; margin-bottom:8px;"></div>
             <div style="display:flex; justify-content:space-between; align-items:center;">
-              <div><span style="font-size:14px;font-weight:bold;color:#f97316;">R65</span><span style="font-size:9px;color:#888;">/bag</span></div>
-              <div class="box" style="width:55px;height:26px;background:#22c55e;color:#fff;border-color:#22c55e;font-size:9px;border-radius:8px;">&#10003; Added</div>
+              <div class="ph" style="height:16px; width:50px;"></div>
+              <div class="box" style="width:50px;height:26px;background:#f97316;color:#fff;border-color:#f97316;font-size:9px;border-radius:8px;">Add</div>
             </div>
           </div>
         </div>
-        <!-- Product Card 3 -->
+        <!-- Card 3 -->
         <div style="border:1.5px solid #999; border-radius:12px; overflow:hidden;">
-          <div class="box" style="height:120px; border-radius:0; border:none;">[PRODUCT IMAGE]</div>
+          <div class="box" style="height:110px; border-radius:0; border:none;">[Product Image]</div>
           <div style="padding:8px;">
-            <div style="font-size:9px; color:#0ea5e9; margin-bottom:3px;">&#128205; Mitchells Plain</div>
-            <div class="box" style="height:12px; width:75%; margin-bottom:6px; border:none; background:#e8e8e8;"></div>
+            <div class="ph" style="height:10px; width:60%; margin-bottom:6px;"></div>
+            <div class="ph" style="height:13px; width:75%; margin-bottom:8px;"></div>
             <div style="display:flex; justify-content:space-between; align-items:center;">
-              <div><span style="font-size:14px;font-weight:bold;color:#f97316;">R28</span><span style="font-size:9px;color:#888;">/m</span></div>
-              <div class="box" style="width:55px;height:26px;background:#f97316;color:#fff;border-color:#f97316;font-size:9px;border-radius:8px;">Add</div>
+              <div class="ph" style="height:16px; width:50px;"></div>
+              <div class="box" style="width:50px;height:26px;background:#f97316;color:#fff;border-color:#f97316;font-size:9px;border-radius:8px;">Add</div>
             </div>
           </div>
         </div>
@@ -121,32 +110,25 @@
     </div>
   </div>
 
-  <div class="annotation">&larr; Card 2 shows "&#10003; Added" state (green, 1.5s) after click | 3D tilt on mousemove | Heart fills orange when wishlisted</div>
-
-  <!-- Cart Drawer annotation -->
   <div class="gap"></div>
-  <div class="section-title">CART DRAWER (slides in from right — shadcn Sheet component)</div>
-  <div class="row" style="height:200px; border-bottom:1.5px solid #ddd;">
-    <div style="flex:1; padding:10px; background:#f9f9f9; font-size:10px; color:#888;">&larr; Main page content (dimmed overlay)</div>
-    <div style="width:320px; border-left:2px solid #222; padding:12px; display:flex; flex-direction:column; gap:8px;">
-      <div style="font-weight:bold; font-size:12px;">Shopping Cart (2 items)</div>
-      <div class="box" style="height:50px; flex-direction:column; gap:4px; border-radius:8px;">
-        <div style="font-size:10px;">Product Name &times; [&minus;] 2 [+] | R150.00 | &times;</div>
-      </div>
-      <div class="box" style="height:50px; flex-direction:column; gap:4px; border-radius:8px;">
-        <div style="font-size:10px;">Product Name &times; [&minus;] 1 [+] | R89.00 | &times;</div>
-      </div>
+
+  <!-- Cart Drawer -->
+  <div class="section-title">CART DRAWER (slides in from right)</div>
+  <div class="row" style="height:180px; border-bottom:1.5px solid #ddd;">
+    <div style="flex:1; padding:10px; background:#f9f9f9; font-size:10px; color:#bbb; display:flex; align-items:center; justify-content:center;">Page content (dimmed)</div>
+    <div style="width:300px; border-left:2px solid #222; padding:12px; display:flex; flex-direction:column; gap:8px;">
+      <div style="font-weight:bold; font-size:12px;">Shopping Cart</div>
+      <div class="box" style="height:44px; border-radius:8px; font-size:10px;">Product × qty | Price | Remove</div>
+      <div class="box" style="height:44px; border-radius:8px; font-size:10px;">Product × qty | Price | Remove</div>
       <div style="border-top:1px solid #ddd; padding-top:8px; font-size:10px; display:flex; flex-direction:column; gap:3px;">
-        <div style="display:flex; justify-content:space-between;"><span>Subtotal</span><span>R239.00</span></div>
-        <div style="display:flex; justify-content:space-between; color:#22c55e;"><span>Bundle Discount (-10%)</span><span>-R23.90</span></div>
-        <div style="display:flex; justify-content:space-between; color:#888;"><span>Platform Fee (7.5%)</span><span>+R16.13</span></div>
-        <div style="display:flex; justify-content:space-between; font-weight:bold;"><span>Total</span><span style="color:#f97316;">R231.23</span></div>
+        <div style="display:flex; justify-content:space-between;"><span>Total</span><span style="color:#f97316; font-weight:bold;">R [total]</span></div>
       </div>
-      <div class="box" style="height:36px; background:#f97316; color:#fff; border-color:#f97316; border-radius:10px; font-size:11px;">Proceed to Checkout &rarr;</div>
+      <div class="box" style="height:36px; background:#f97316; color:#fff; border-color:#f97316; border-radius:10px; font-size:11px;">Proceed to Checkout →</div>
     </div>
   </div>
 
   <!-- Footer -->
+  <div class="section-title">FOOTER</div>
   <div class="box dark" style="height:60px; font-size:11px;">FOOTER — Same as Landing Page</div>
 </div>
 </body>

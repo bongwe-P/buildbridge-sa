@@ -1,0 +1,95 @@
+<style>
+.hta { padding: 0.5rem 0 0.25rem; font-family: system-ui, -apple-system, sans-serif; color: #111; background: #e8e8e8; }
+.hta-sr { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+.hta-task { background: #fff; border: 1.5px solid #888; border-radius: 10px; padding: 12px 18px; max-width: 440px; margin: 0 auto 10px; text-align: center; }
+.hta-task .ttl { font-size: 15px; font-weight: 700; line-height: 1.3; color: #111; }
+.hta-task .sub { font-size: 12px; color: #333; margin-top: 3px; }
+.hta-trunk { width: 2px; height: 14px; background: #666; margin: 0 auto; }
+.hta-plan { background: #fff3cd; border: 1.5px solid #b8860b; border-radius: 7px; padding: 9px 14px; max-width: 600px; margin: 0 auto 16px; font-size: 12.5px; line-height: 1.5; color: #4a2800; }
+.hta-plan .lbl { font-weight: 600; }
+.hta-tree { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.hta-head { background: #c8f0e6; border: 1.5px solid #0a7a5e; border-radius: 7px; padding: 8px 4px; text-align: center; font-size: 12.5px; font-weight: 700; line-height: 1.3; color: #053d30; margin-bottom: 6px; min-height: 44px; display: flex; align-items: center; justify-content: center; }
+.hta-items { list-style: none; margin: 0 0 0 6px; padding: 2px 0 2px 8px; border-left: 2px dashed #666; font-size: 12px; line-height: 1.5; color: #111; }
+.hta-items > li { padding: 2px 0; }
+.hta-subs { list-style: none; margin: 2px 0 3px 4px; padding: 0 0 0 8px; border-left: 1.5px dashed #888; }
+.hta-subs > li { font-size: 11px; color: #333; padding: 1.5px 0; line-height: 1.4; }
+</style>
+<h2 class="hta-sr">Hierarchical task analysis of purchasing materials for a 5-metre boundary wall using the BuildBridge SA Smart Estimator, with four main subtasks and their decomposed steps.</h2>
+<div class="hta">
+  <div class="hta-task">
+    <div class="ttl">0. Purchase materials for a 5-metre boundary wall</div>
+    <div class="sub">using the BuildBridge SA Smart Estimator</div>
+  </div>
+  <div class="hta-trunk"></div>
+  <div class="hta-plan"><span class="lbl">Plan 0.</span> Do 1 → 2 → 3 → 4 in sequence. If stock is unavailable at step 3.2, go to step 3.3 (browse shop manually). If checkout fails, retry step 4.</div>
+  <div class="hta-tree">
+    <div>
+      <div class="hta-head">1. Access the Smart Project Estimator</div>
+      <ul class="hta-items">
+        <li>1.1 Open BuildBridge SA on mobile browser</li>
+        <li>1.2 Observe landing page hero section</li>
+        <li>1.3 Tap "Smart Estimator" in nav
+          <ul class="hta-subs">
+            <li>Alt: tap CTA button on landing page</li>
+          </ul>
+        </li>
+        <li>1.4 Estimator page loads with two sliders (Wall Length, Wall Height)</li>
+      </ul>
+    </div>
+    <div>
+      <div class="hta-head">2. Input project parameters</div>
+      <ul class="hta-items">
+        <li>2.1 Drag Wall Length slider to 5 m
+          <ul class="hta-subs">
+            <li>2.1.1 Live wall diagram updates proportionally</li>
+            <li>2.1.2 Value below slider reads "5m"</li>
+          </ul>
+        </li>
+        <li>2.2 Drag Wall Height slider to 1.8 m
+          <ul class="hta-subs">
+            <li>2.2.1 Live wall diagram updates</li>
+            <li>2.2.2 Value reads "1.8m"</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <div class="hta-head">3. Review output &amp; select bundle</div>
+      <ul class="hta-items">
+        <li>3.1 Read result cards: Wall Area 5 m², Bricks 450, Cement 3 bags, 9 m³</li>
+        <li>3.2 View Recommended Bundle panel
+          <ul class="hta-subs">
+            <li>3.2.1 Read bricks line item name &amp; qty</li>
+            <li>3.2.2 Read cement line item name &amp; qty</li>
+            <li>3.2.3 Read "After 10% bundle discount" price</li>
+          </ul>
+        </li>
+        <li>3.3 (If no stock) Read error → navigate to /shop manually</li>
+        <li>3.4 Tap "Add Bundle to Cart (10% Off)"
+          <ul class="hta-subs">
+            <li>3.4.1 Button turns green "✓ Bundle Added to Cart!" 2s</li>
+            <li>3.4.2 Cart icon updates with item count</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <div class="hta-head">4. Complete checkout</div>
+      <ul class="hta-items">
+        <li>4.1 Tap cart icon → open Cart Drawer
+          <ul class="hta-subs">
+            <li>4.1.1 Verify line items match bundle</li>
+            <li>4.1.2 Verify 10% bundle discount deduction</li>
+            <li>4.1.3 Verify 7.5% platform fee</li>
+            <li>4.1.4 Verify final total in Rands</li>
+          </ul>
+        </li>
+        <li>4.2 Tap "Proceed to Checkout →"</li>
+        <li>4.3 Complete checkout form (name, address, contact)</li>
+        <li>4.4 Tap "Complete Order"</li>
+        <li>4.5 Observe success screen with confetti</li>
+        <li>4.6 Note order reference for WhatsApp follow-up</li>
+      </ul>
+    </div>
+  </div>
+</div>

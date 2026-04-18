@@ -88,32 +88,6 @@ Then open **http://localhost:4173** in your browser.
 
 ---
 
-## Site Pages
-
-| Page | URL | Description |
-|------|-----|-------------|
-| Landing | `http://localhost:5173/` | Hero, stats, categories, featured listings |
-| Shop | `http://localhost:5173/shop` | Full product catalog with search and filters |
-| Smart Estimator | `http://localhost:5173/estimator` | **Custom feature** — calculate materials for a wall |
-| Checkout | `http://localhost:5173/checkout` | Complete an order (simulated, no payment gateway) |
-| About | `http://localhost:5173/about` | Company story, timeline, values |
-| Contact | `http://localhost:5173/contact` | Contact form and info |
-
----
-
-## Key Features to Test
-
-- **Search**: On the Shop page, type in the search bar — results filter live with every keystroke
-- **Filter**: Click category checkboxes in the sidebar to filter products
-- **Add to Cart**: Click "Add" on any product card — the cart count updates in the navbar
-- **Wishlist**: Click the heart icon on any product card — the wishlist count updates
-- **Smart Estimator**: Go to `/estimator`, drag the sliders — the SVG wall diagram updates live, and a recommended bundle appears automatically
-- **Bundle Discount**: Add the bundle from the Estimator — a 10% discount is applied in the cart
-- **Cart Drawer**: Click the Cart button in the navbar — view items, adjust quantities, see the platform fee breakdown
-- **Checkout**: Proceed from the cart, fill in the delivery form, click Complete Order — confetti fires and a success modal appears
-- **Dark Mode**: Click the moon icon in the navbar to toggle full dark mode
-
----
 
 ## Troubleshooting
 
@@ -124,25 +98,6 @@ Then open **http://localhost:4173** in your browser.
 | `node_modules` missing | Run `npm install` first before `npm run dev` |
 | Blank white page | Ensure you are at `http://localhost:5173/` (not just opening the HTML file directly) |
 
----
-
-## Project Structure
-
-```
-project/
-├── src/
-│   ├── components/     # All React components
-│   ├── context/        # Cart, Wishlist, UI state (React Context)
-│   ├── data/           # Mock product database (products.js)
-│   ├── hooks/          # Custom React hooks
-│   ├── pages/          # Page components (Landing, Shop, Estimator, etc.)
-│   └── utils/          # Business logic (estimator calculations, cart reducer)
-├── Docs/               # Report documents, wireframes, AI declaration
-├── tests/              # Unit tests (run with: npm test)
-├── dist/               # Pre-built production files
-├── package.json        # Project dependencies
-└── index.html          # Entry point
-```
 
 ---
 
