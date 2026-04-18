@@ -37,7 +37,7 @@ export default function ContactInfo() {
         </div>
         <div>
           <p className="font-body text-xs text-slate-500 uppercase tracking-wide mb-1">Office Hours</p>
-          <p className="font-body text-white text-sm">Mon – Fri: 08:00 – 17:00 SAST</p>
+          <p className="font-body text-white text-sm">Monday to Friday: 08:00 to 17:00 SAST</p>
           <p className="font-body text-slate-400 text-xs mt-0.5">We respond within 24 hours</p>
         </div>
       </div>

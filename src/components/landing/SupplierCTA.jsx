@@ -16,7 +16,7 @@ export default function SupplierCTA() {
           onClick={() => alert('Supplier onboarding coming soon! Contact us at suppliers@buildbridgesa.co.za')}
           className="px-10 py-5 bg-orange-500 text-white font-heading font-bold text-xl rounded-2xl hover:bg-orange-600 transition-colors duration-200 cursor-pointer"
         >
-          List Your Surplus — It's Free
+          List Your Surplus for Free
         </button>
       </div>
     </section>

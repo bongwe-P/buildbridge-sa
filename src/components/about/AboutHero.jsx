@@ -51,7 +51,7 @@ export default function AboutHero() {
         </div>
 
         <p className="font-body text-slate-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-          Turning construction surplus into community opportunity — one brick at a time.
+          Turning construction surplus into community opportunity, one brick at a time.
         </p>
       </div>
 

@@ -20,7 +20,7 @@ export default function EstimatorPage() {
             Smart Project <span className="text-orange-500">Estimator</span>
           </h1>
           <p className="font-body text-slate-600 dark:text-slate-400 text-lg max-w-2xl">
-            Enter your wall dimensions. We calculate exactly what you need and match it to available surplus stock — no guessing, no overbuying.
+            Enter your wall dimensions. We calculate exactly what you need and match it to available surplus stock, no guessing and no overbuying.
           </p>
         </div>
 

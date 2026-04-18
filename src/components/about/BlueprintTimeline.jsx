@@ -3,7 +3,7 @@ import { useRef, useEffect, useState } from 'react'
 const milestones = [
   { year: '2022', title: 'BuildBridge SA Founded', body: 'Started in Cape Town with a mission to connect construction surplus with community builders across the Western Cape.', side: 'left' },
   { year: '2023', title: '100+ Active Surplus Suppliers', body: 'Civil contractors, developers, and demolition firms joined our growing supplier network.', side: 'right' },
-  { year: '2024', title: '1,200 Community Builders Served', body: 'Township builders and DIY home improvers across the Cape Flats gained access to quality materials at 50–80% below retail.', side: 'left' },
+  { year: '2024', title: '1,200 Community Builders Served', body: 'Township builders and DIY home improvers across the Cape Flats gained access to quality materials at 50 to 80% below retail.', side: 'left' },
   { year: '2026', title: 'R1.2M Saved Across the Western Cape', body: 'Our platform has saved builders over R1.2 million while diverting 2,400+ tonnes of materials from landfill.', side: 'right' },
 ]
 

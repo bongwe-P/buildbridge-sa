@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react'
 
 const messages = [
   "Sipho in Khayelitsha just saved R1,240 on facebrick",
-  "3 pallets of cement listed in Bellville — 2 hours ago",
+  "3 pallets of cement listed in Bellville, 2 hours ago",
   "Thabo in Mitchells Plain completed an order of timber",
-  "New roofing sheets available in Maitland — R180/sheet",
+  "New roofing sheets available in Maitland at R180 per sheet",
   "Sarah listed 8,500 surplus bricks from Brackenfell site",
   "Zanele used the Smart Estimator to plan her boundary wall",
 ]

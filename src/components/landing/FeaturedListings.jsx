@@ -80,7 +80,7 @@ export default function FeaturedListings() {
         <div className="flex items-end justify-between mb-10">
           <div>
             <h2 className="font-heading font-black text-4xl text-slate-900 dark:text-white">Featured listings</h2>
-            <p className="font-body text-slate-600 dark:text-slate-400 mt-2">Fresh surplus — just posted</p>
+            <p className="font-body text-slate-600 dark:text-slate-400 mt-2">Fresh surplus, just posted</p>
           </div>
           <Link to="/shop" className="font-body font-semibold text-orange-500 hover:text-orange-600 cursor-pointer">View all →</Link>
         </div>

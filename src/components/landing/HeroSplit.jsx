@@ -81,7 +81,7 @@ export default function HeroSplit() {
             ))}
           </h1>
           <p className="font-body text-slate-600 dark:text-slate-300 text-base lg:text-lg mb-8 leading-relaxed">
-            Access high-quality surplus construction materials at 50–80% below retail. Build more, spend less.
+            Access high-quality surplus construction materials at 50 to 80% below retail. Build more, spend less.
           </p>
           <MagneticLink
             to="/shop"

@@ -32,7 +32,7 @@ const values = [
   },
   {
     title: 'Radical Transparency',
-    body: 'Every price, condition grade, and stock quantity is honest. No hidden fees — just the 7.5% platform fee shown clearly at checkout.',
+    body: 'Every price, condition grade, and stock quantity is honest. No hidden fees, just the 7.5% platform fee shown clearly at checkout.',
     icon: (
       <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-12 h-12 text-orange-500">
         <rect x="10" y="6" width="28" height="36" rx="3" />

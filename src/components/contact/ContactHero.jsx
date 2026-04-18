@@ -33,7 +33,7 @@ export default function ContactHero() {
           Let's Build Together
         </h1>
         <p className="font-body text-slate-400 text-lg max-w-xl mx-auto">
-          Whether you're a supplier, builder, or just curious — we want to hear from you.
+          Whether you're a supplier, builder, or just curious, we want to hear from you.
         </p>
       </div>
 

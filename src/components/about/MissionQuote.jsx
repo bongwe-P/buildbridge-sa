@@ -30,7 +30,7 @@ export default function MissionQuote() {
             "Every tonne of surplus concrete diverted is a foundation laid for someone's future."
           </blockquote>
           <p className="font-body text-slate-500 dark:text-slate-400 text-sm uppercase tracking-widest">
-            — BuildBridge SA Mission Statement
+            BuildBridge SA Mission Statement
           </p>
         </div>
       </div>

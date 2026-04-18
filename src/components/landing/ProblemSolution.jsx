@@ -16,7 +16,7 @@ export default function ProblemSolution() {
               Contractors pay to dump. Builders can't afford to build.
             </h3>
             <p className="font-body text-slate-600 dark:text-slate-400 leading-relaxed">
-              Construction sites generate thousands of tonnes of usable surplus materials annually — all destined for landfill at a cost. Meanwhile, township builders and community members lack access to affordable, quality materials.
+              Construction sites generate thousands of tonnes of usable surplus materials annually, all of it destined for landfill at a cost. Meanwhile, township builders and community members have no access to affordable, quality materials.
             </p>
           </div>
           <div className="bg-green-50 dark:bg-green-950/30 border border-green-200 dark:border-green-900 rounded-3xl p-10">
@@ -25,7 +25,7 @@ export default function ProblemSolution() {
               BuildBridge connects surplus with community need.
             </h3>
             <p className="font-body text-slate-600 dark:text-slate-400 leading-relaxed">
-              Our platform creates a direct link: contractors list surplus materials for free, community builders purchase at 50–80% below retail. Zero waste. Zero dump fees. Maximum social impact.
+              Our platform creates a direct link: contractors list surplus materials for free, and community builders purchase at 50 to 80% below retail. Zero waste. Zero dump fees. Maximum social impact.
             </p>
           </div>
         </div>
